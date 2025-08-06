@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1754472002679,
     "description" : "",
@@ -7,5 +8,3456 @@
     "name" : "Cox-Spark",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "0bf74b7f-1eff-33e4-957c-37c32070f0bd",
+        "name" : "Spark-Structured-Insert-Email-Notification",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "4e92d982-4491-3e64-9169-ab737ca9ed35",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "52ddeb30-4fde-3977-bda0-e8f9c01e3fd3",
+        "name" : "Spark-Structured-Insert-Output",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c43c5769-ed52-3c29-b663-2cfef85c4de2",
+        "name" : "Spark-Structured-Update-Email-Notification",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "33c4734e-040d-30f7-902e-75cf06b9140a",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1e7bc072-8045-3da6-8be1-6546da6ba3d0",
+        "name" : "Spark-Structured-Update-Output",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "6149b67e-6c73-3c29-b09a-ee49ee519a55",
+        "name" : "Nifi-Email-Notification",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e91b98cc-d506-3fd7-bdf3-e67277750ac6",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "dd9bd7e6-4e80-37f7-9d34-bab2073a0d10",
+        "name" : "Nifi-Status-Output",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "12cd5b6b-c512-3a1a-b5ee-7944f5db0139",
+        "name" : "Spark-Soak",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "5170dca1-c36d-3f63-826d-44aa2cf7b9f7",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "original" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "401d3665-ce3d-3c07-9ef0-afbd3df1d06d",
+        "name" : "Nifi-Status-Check",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "067d86dd-65ca-3c64-9855-491bb3555096",
+        "name" : "Spark-Enrich-Email-Notification",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "9a4a8540-026b-3c1e-a10f-8212751a9a6d",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "ce8f4b9a-eb2b-3a76-93e3-cff3a7f0eb71",
+        "name" : "Spark-Enrich-Output",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "17f44b47-9e7e-3525-bd5a-449a358195d3",
+        "name" : "Spark-Soak-Output",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "94dd6e07-d2aa-3b9a-8f06-d7e50fe43211",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "output stream", "original", "nonzero status" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "12cd5b6b-c512-3a1a-b5ee-7944f5db0139",
+        "name" : "Spark-Soak",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1e7bc072-8045-3da6-8be1-6546da6ba3d0",
+        "name" : "Spark-Structured-Update-Output",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d5230025-9418-3d22-b2fe-a677e4cd3fce",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "output stream", "original", "nonzero status" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "9a62cf51-5ac3-38a7-a137-b178cddb9234",
+        "name" : "Spark-Structured-Update",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "b908bd65-271b-326a-be49-2c655154803d",
+        "name" : "Spark-Enrich",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "00ffda77-0361-3f5e-b4e9-a80aeca48c4f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "original" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "401d3665-ce3d-3c07-9ef0-afbd3df1d06d",
+        "name" : "Nifi-Status-Check",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "dfb0ff40-e99f-31c4-8fe5-7f37d10ec8a1",
+        "name" : "Spark-Structured-Insert",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6e3b4e62-d66c-36ea-a81a-e244397de5ae",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "original" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "401d3665-ce3d-3c07-9ef0-afbd3df1d06d",
+        "name" : "Nifi-Status-Check",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "b0a3368c-b7eb-386a-aac0-a8d10f380e70",
+        "name" : "Spark-Soak-Email-Notification",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7e46b723-1f6b-3dc6-8400-5c5c6bc8c031",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "17f44b47-9e7e-3525-bd5a-449a358195d3",
+        "name" : "Spark-Soak-Output",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "ce8f4b9a-eb2b-3a76-93e3-cff3a7f0eb71",
+        "name" : "Spark-Enrich-Output",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f7dfc4f1-c94c-3494-8412-9fe1c54adc1e",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "output stream", "original", "nonzero status" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "b908bd65-271b-326a-be49-2c655154803d",
+        "name" : "Spark-Enrich",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "9a62cf51-5ac3-38a7-a137-b178cddb9234",
+        "name" : "Spark-Structured-Update",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f92c1423-b9b4-37af-9e39-248da92cbb05",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "original" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "401d3665-ce3d-3c07-9ef0-afbd3df1d06d",
+        "name" : "Nifi-Status-Check",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "401d3665-ce3d-3c07-9ef0-afbd3df1d06d",
+        "name" : "Nifi-Status-Check",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8fcd9860-e323-39da-b904-aef4dee14179",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bb642a36-eaa0-346e-8f96-0a5d04690028",
+        "name" : "Scheduling-Workflow",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "dd9bd7e6-4e80-37f7-9d34-bab2073a0d10",
+        "name" : "Nifi-Status-Output",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c983cc35-15e6-3997-a4b1-a118bd15ab65",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "output stream", "original", "nonzero status" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "401d3665-ce3d-3c07-9ef0-afbd3df1d06d",
+        "name" : "Nifi-Status-Check",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "52ddeb30-4fde-3977-bda0-e8f9c01e3fd3",
+        "name" : "Spark-Structured-Insert-Output",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "37734bf5-7617-3458-b066-9d96331dd45f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "output stream", "original", "nonzero status" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "dfb0ff40-e99f-31c4-8fe5-7f37d10ec8a1",
+        "name" : "Spark-Structured-Insert",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c2c2578c-fe48-3415-82ad-b2f983f4a519",
+        "name" : "Spark-Jobs-Email-Notification",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "9b2e28d8-3819-37d9-a219-3512932a50b3",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "43b12d6e-4b09-32bc-a82e-0ad5de1a53a3",
+        "name" : "Spark-Jobs-Monitoring-Info",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "Parallel-Workflow-Spark",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "067d86dd-65ca-3c64-9855-491bb3555096",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Enrich-Email-Notification",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 40.0,
+        "y" : 920.0
+      },
+      "properties" : {
+        "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
+        "Message" : "${email.content}",
+        "Attach File" : "false",
+        "input-character-set" : "UTF-8",
+        "SMTP Port" : "587",
+        "SMTP Auth" : "true",
+        "From" : "A1netcoolqaprobe@cox.com",
+        "Include All Attributes In Message" : "false",
+        "SMTP Hostname" : "smtp.office365.com",
+        "Subject" : "SPARK-STRUCTURED ERROR NOTIFICATION FOR ENRICH",
+        "SMTP X-Mailer Header" : "NiFi",
+        "Content Type" : "text/plain",
+        "SMTP Username" : "A1netcoolqaprobe@cox.com",
+        "To" : "chandraprasad.konakalla@cox.com,bhargavkumar.kodavali@cox.com,bhavika.patel@cox.com,lalithreddy.gangi@cox.com",
+        "email-ff-content-as-message" : "true",
+        "authorization-mode" : "password-based-authorization-mode",
+        "SMTP TLS" : "true"
+      },
+      "propertyDescriptors" : {
+        "CC" : {
+          "displayName" : "CC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CC",
+          "sensitive" : false
+        },
+        "Reply-To" : {
+          "displayName" : "Reply-To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Reply-To",
+          "sensitive" : false
+        },
+        "SMTP Socket Factory" : {
+          "displayName" : "SMTP Socket Factory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Socket Factory",
+          "sensitive" : false
+        },
+        "BCC" : {
+          "displayName" : "BCC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "BCC",
+          "sensitive" : false
+        },
+        "Message" : {
+          "displayName" : "Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message",
+          "sensitive" : false
+        },
+        "Attach File" : {
+          "displayName" : "Attach File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attach File",
+          "sensitive" : false
+        },
+        "attribute-name-regex" : {
+          "displayName" : "Attributes to Send as Headers (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attribute-name-regex",
+          "sensitive" : false
+        },
+        "input-character-set" : {
+          "displayName" : "Input Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "input-character-set",
+          "sensitive" : false
+        },
+        "SMTP Port" : {
+          "displayName" : "SMTP Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Port",
+          "sensitive" : false
+        },
+        "SMTP Auth" : {
+          "displayName" : "SMTP Auth",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Auth",
+          "sensitive" : false
+        },
+        "From" : {
+          "displayName" : "From",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "From",
+          "sensitive" : false
+        },
+        "Include All Attributes In Message" : {
+          "displayName" : "Include All Attributes In Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include All Attributes In Message",
+          "sensitive" : false
+        },
+        "SMTP Hostname" : {
+          "displayName" : "SMTP Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Hostname",
+          "sensitive" : false
+        },
+        "Subject" : {
+          "displayName" : "Subject",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Subject",
+          "sensitive" : false
+        },
+        "SMTP X-Mailer Header" : {
+          "displayName" : "SMTP X-Mailer Header",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP X-Mailer Header",
+          "sensitive" : false
+        },
+        "oauth2-access-token-provider" : {
+          "displayName" : "OAuth2 Access Token Provider",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "oauth2-access-token-provider",
+          "sensitive" : false
+        },
+        "Content Type" : {
+          "displayName" : "Content Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Content Type",
+          "sensitive" : false
+        },
+        "SMTP Username" : {
+          "displayName" : "SMTP Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Username",
+          "sensitive" : false
+        },
+        "To" : {
+          "displayName" : "To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "To",
+          "sensitive" : false
+        },
+        "SMTP Password" : {
+          "displayName" : "SMTP Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Password",
+          "sensitive" : true
+        },
+        "email-ff-content-as-message" : {
+          "displayName" : "Flow file content as message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "email-ff-content-as-message",
+          "sensitive" : false
+        },
+        "authorization-mode" : {
+          "displayName" : "Authorization Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "authorization-mode",
+          "sensitive" : false
+        },
+        "SMTP TLS" : {
+          "displayName" : "SMTP STARTTLS",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP TLS",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.PutEmail",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "401d3665-ce3d-3c07-9ef0-afbd3df1d06d",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Nifi-Status-Check",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -224.0,
+        "y" : 16.0
+      },
+      "properties" : {
+        "argumentsStrategy" : "Command Arguments Property",
+        "Max Attribute Length" : "256",
+        "Command Path" : "sh",
+        "Argument Delimiter" : ";",
+        "Ignore STDIN" : "false",
+        "Command Arguments" : "/opt/nifi/nifi-current/conf/scripts/check_status.sh"
+      },
+      "propertyDescriptors" : {
+        "argumentsStrategy" : {
+          "displayName" : "Command Arguments Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "argumentsStrategy",
+          "sensitive" : false
+        },
+        "Max Attribute Length" : {
+          "displayName" : "Max Attribute Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Attribute Length",
+          "sensitive" : false
+        },
+        "Output MIME Type" : {
+          "displayName" : "Output MIME Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output MIME Type",
+          "sensitive" : false
+        },
+        "Working Directory" : {
+          "displayName" : "Working Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Working Directory",
+          "sensitive" : false
+        },
+        "Command Path" : {
+          "displayName" : "Command Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Path",
+          "sensitive" : false
+        },
+        "Output Destination Attribute" : {
+          "displayName" : "Output Destination Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Destination Attribute",
+          "sensitive" : false
+        },
+        "Argument Delimiter" : {
+          "displayName" : "Argument Delimiter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Argument Delimiter",
+          "sensitive" : false
+        },
+        "Ignore STDIN" : {
+          "displayName" : "Ignore STDIN",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore STDIN",
+          "sensitive" : false
+        },
+        "Command Arguments" : {
+          "displayName" : "Command Arguments",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Arguments",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b908bd65-271b-326a-be49-2c655154803d",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Enrich",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 24.0,
+        "y" : 296.0
+      },
+      "properties" : {
+        "argumentsStrategy" : "Command Arguments Property",
+        "Max Attribute Length" : "256",
+        "Command Path" : "sh",
+        "Argument Delimiter" : ";",
+        "Ignore STDIN" : "false",
+        "Command Arguments" : "/opt/nifi/nifi-current/conf/scripts/worker/spark-enrich.sh"
+      },
+      "propertyDescriptors" : {
+        "argumentsStrategy" : {
+          "displayName" : "Command Arguments Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "argumentsStrategy",
+          "sensitive" : false
+        },
+        "Max Attribute Length" : {
+          "displayName" : "Max Attribute Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Attribute Length",
+          "sensitive" : false
+        },
+        "Output MIME Type" : {
+          "displayName" : "Output MIME Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output MIME Type",
+          "sensitive" : false
+        },
+        "Working Directory" : {
+          "displayName" : "Working Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Working Directory",
+          "sensitive" : false
+        },
+        "Command Path" : {
+          "displayName" : "Command Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Path",
+          "sensitive" : false
+        },
+        "Output Destination Attribute" : {
+          "displayName" : "Output Destination Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Destination Attribute",
+          "sensitive" : false
+        },
+        "Argument Delimiter" : {
+          "displayName" : "Argument Delimiter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Argument Delimiter",
+          "sensitive" : false
+        },
+        "Ignore STDIN" : {
+          "displayName" : "Ignore STDIN",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore STDIN",
+          "sensitive" : false
+        },
+        "Command Arguments" : {
+          "displayName" : "Command Arguments",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Arguments",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c43c5769-ed52-3c29-b663-2cfef85c4de2",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Structured-Update-Email-Notification",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -480.0,
+        "y" : 920.0
+      },
+      "properties" : {
+        "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
+        "Message" : "${email.content}",
+        "Attach File" : "false",
+        "input-character-set" : "UTF-8",
+        "SMTP Port" : "587",
+        "SMTP Auth" : "true",
+        "From" : "A1netcoolqaprobe@cox.com",
+        "Include All Attributes In Message" : "false",
+        "SMTP Hostname" : "smtp.office365.com",
+        "Subject" : "SPARK-STRUCTURED ERROR NOTIFICATION FOR UPDATE",
+        "SMTP X-Mailer Header" : "NiFi",
+        "Content Type" : "text/plain",
+        "SMTP Username" : "A1netcoolqaprobe@cox.com",
+        "To" : "chandraprasad.konakalla@cox.com,bhargavkumar.kodavali@cox.com,bhavika.patel@cox.com,lalithreddy.gangi@cox.com,kumarsrinivas.katta@cox.com",
+        "email-ff-content-as-message" : "true",
+        "authorization-mode" : "password-based-authorization-mode",
+        "SMTP TLS" : "true"
+      },
+      "propertyDescriptors" : {
+        "CC" : {
+          "displayName" : "CC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CC",
+          "sensitive" : false
+        },
+        "Reply-To" : {
+          "displayName" : "Reply-To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Reply-To",
+          "sensitive" : false
+        },
+        "SMTP Socket Factory" : {
+          "displayName" : "SMTP Socket Factory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Socket Factory",
+          "sensitive" : false
+        },
+        "BCC" : {
+          "displayName" : "BCC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "BCC",
+          "sensitive" : false
+        },
+        "Message" : {
+          "displayName" : "Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message",
+          "sensitive" : false
+        },
+        "Attach File" : {
+          "displayName" : "Attach File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attach File",
+          "sensitive" : false
+        },
+        "attribute-name-regex" : {
+          "displayName" : "Attributes to Send as Headers (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attribute-name-regex",
+          "sensitive" : false
+        },
+        "input-character-set" : {
+          "displayName" : "Input Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "input-character-set",
+          "sensitive" : false
+        },
+        "SMTP Port" : {
+          "displayName" : "SMTP Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Port",
+          "sensitive" : false
+        },
+        "SMTP Auth" : {
+          "displayName" : "SMTP Auth",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Auth",
+          "sensitive" : false
+        },
+        "From" : {
+          "displayName" : "From",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "From",
+          "sensitive" : false
+        },
+        "Include All Attributes In Message" : {
+          "displayName" : "Include All Attributes In Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include All Attributes In Message",
+          "sensitive" : false
+        },
+        "SMTP Hostname" : {
+          "displayName" : "SMTP Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Hostname",
+          "sensitive" : false
+        },
+        "Subject" : {
+          "displayName" : "Subject",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Subject",
+          "sensitive" : false
+        },
+        "SMTP X-Mailer Header" : {
+          "displayName" : "SMTP X-Mailer Header",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP X-Mailer Header",
+          "sensitive" : false
+        },
+        "oauth2-access-token-provider" : {
+          "displayName" : "OAuth2 Access Token Provider",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "oauth2-access-token-provider",
+          "sensitive" : false
+        },
+        "Content Type" : {
+          "displayName" : "Content Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Content Type",
+          "sensitive" : false
+        },
+        "SMTP Username" : {
+          "displayName" : "SMTP Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Username",
+          "sensitive" : false
+        },
+        "To" : {
+          "displayName" : "To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "To",
+          "sensitive" : false
+        },
+        "SMTP Password" : {
+          "displayName" : "SMTP Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Password",
+          "sensitive" : true
+        },
+        "email-ff-content-as-message" : {
+          "displayName" : "Flow file content as message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "email-ff-content-as-message",
+          "sensitive" : false
+        },
+        "authorization-mode" : {
+          "displayName" : "Authorization Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "authorization-mode",
+          "sensitive" : false
+        },
+        "SMTP TLS" : {
+          "displayName" : "SMTP STARTTLS",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP TLS",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.PutEmail",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "dfb0ff40-e99f-31c4-8fe5-7f37d10ec8a1",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Structured-Insert",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -1024.0,
+        "y" : 304.0
+      },
+      "properties" : {
+        "argumentsStrategy" : "Command Arguments Property",
+        "Max Attribute Length" : "256",
+        "Command Path" : "sh",
+        "Argument Delimiter" : ";",
+        "Ignore STDIN" : "false",
+        "Command Arguments" : "/opt/nifi/nifi-current/conf/scripts/worker/spark-insert.sh"
+      },
+      "propertyDescriptors" : {
+        "argumentsStrategy" : {
+          "displayName" : "Command Arguments Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "argumentsStrategy",
+          "sensitive" : false
+        },
+        "Max Attribute Length" : {
+          "displayName" : "Max Attribute Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Attribute Length",
+          "sensitive" : false
+        },
+        "Output MIME Type" : {
+          "displayName" : "Output MIME Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output MIME Type",
+          "sensitive" : false
+        },
+        "Working Directory" : {
+          "displayName" : "Working Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Working Directory",
+          "sensitive" : false
+        },
+        "Command Path" : {
+          "displayName" : "Command Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Path",
+          "sensitive" : false
+        },
+        "Output Destination Attribute" : {
+          "displayName" : "Output Destination Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Destination Attribute",
+          "sensitive" : false
+        },
+        "Argument Delimiter" : {
+          "displayName" : "Argument Delimiter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Argument Delimiter",
+          "sensitive" : false
+        },
+        "Ignore STDIN" : {
+          "displayName" : "Ignore STDIN",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore STDIN",
+          "sensitive" : false
+        },
+        "Command Arguments" : {
+          "displayName" : "Command Arguments",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Arguments",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "unmatched" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "1e7bc072-8045-3da6-8be1-6546da6ba3d0",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Structured-Update-Output",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -480.0,
+        "y" : 608.0
+      },
+      "properties" : {
+        "Enable Unicode Predefined Character Classes" : "false",
+        "Status" : "(?mi)^.*err.*\\n?",
+        "Permit Whitespace and Comments in Pattern" : "false",
+        "Enable Unicode-aware Case Folding" : "false",
+        "Enable named group support" : "false",
+        "Enable DOTALL Mode" : "false",
+        "Enable Unix Lines Mode" : "false",
+        "Maximum Buffer Size" : "1 MB",
+        "Enable Canonical Equivalence" : "false",
+        "Enable Case-insensitive Matching" : "false",
+        "Enable Multiline Mode" : "false",
+        "Enable repeating capture group" : "false",
+        "Maximum Capture Group Length" : "1024",
+        "Enable Literal Parsing of the Pattern" : "false",
+        "Character Set" : "UTF-8",
+        "Include Capture Group 0" : "true"
+      },
+      "propertyDescriptors" : {
+        "Enable Unicode Predefined Character Classes" : {
+          "displayName" : "Enable Unicode Predefined Character Classes",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode Predefined Character Classes",
+          "sensitive" : false
+        },
+        "Status" : {
+          "displayName" : "Status",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "Status",
+          "sensitive" : false
+        },
+        "Permit Whitespace and Comments in Pattern" : {
+          "displayName" : "Permit Whitespace and Comments in Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Permit Whitespace and Comments in Pattern",
+          "sensitive" : false
+        },
+        "Enable Unicode-aware Case Folding" : {
+          "displayName" : "Enable Unicode-aware Case Folding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode-aware Case Folding",
+          "sensitive" : false
+        },
+        "Enable named group support" : {
+          "displayName" : "Enable named group support",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable named group support",
+          "sensitive" : false
+        },
+        "Enable DOTALL Mode" : {
+          "displayName" : "Enable DOTALL Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable DOTALL Mode",
+          "sensitive" : false
+        },
+        "Enable Unix Lines Mode" : {
+          "displayName" : "Enable Unix Lines Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unix Lines Mode",
+          "sensitive" : false
+        },
+        "Maximum Buffer Size" : {
+          "displayName" : "Maximum Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Buffer Size",
+          "sensitive" : false
+        },
+        "Enable Canonical Equivalence" : {
+          "displayName" : "Enable Canonical Equivalence",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Canonical Equivalence",
+          "sensitive" : false
+        },
+        "Enable Case-insensitive Matching" : {
+          "displayName" : "Enable Case-insensitive Matching",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Case-insensitive Matching",
+          "sensitive" : false
+        },
+        "Enable Multiline Mode" : {
+          "displayName" : "Enable Multiline Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Multiline Mode",
+          "sensitive" : false
+        },
+        "Enable repeating capture group" : {
+          "displayName" : "Enable repeating capture group",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable repeating capture group",
+          "sensitive" : false
+        },
+        "Maximum Capture Group Length" : {
+          "displayName" : "Maximum Capture Group Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Capture Group Length",
+          "sensitive" : false
+        },
+        "Enable Literal Parsing of the Pattern" : {
+          "displayName" : "Enable Literal Parsing of the Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Literal Parsing of the Pattern",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Include Capture Group 0" : {
+          "displayName" : "Include Capture Group 0",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Capture Group 0",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExtractText",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b0a3368c-b7eb-386a-aac0-a8d10f380e70",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Soak-Email-Notification",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 624.0,
+        "y" : 920.0
+      },
+      "properties" : {
+        "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
+        "Message" : "${email.content}",
+        "Attach File" : "false",
+        "input-character-set" : "UTF-8",
+        "SMTP Port" : "587",
+        "SMTP Auth" : "true",
+        "From" : "A1netcoolqaprobe@cox.com",
+        "Include All Attributes In Message" : "false",
+        "SMTP Hostname" : "smtp.office365.com",
+        "Subject" : "SPARK-STRUCTURED ERROR NOTIFICATION FOR SOAK",
+        "SMTP X-Mailer Header" : "NiFi",
+        "Content Type" : "text/plain",
+        "SMTP Username" : "A1netcoolqaprobe@cox.com",
+        "To" : "chandraprasad.konakalla@cox.com,bhargavkumar.kodavali@cox.com,bhavika.patel@cox.com,lalithreddy.gangi@cox.com",
+        "email-ff-content-as-message" : "true",
+        "authorization-mode" : "password-based-authorization-mode",
+        "SMTP TLS" : "true"
+      },
+      "propertyDescriptors" : {
+        "CC" : {
+          "displayName" : "CC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CC",
+          "sensitive" : false
+        },
+        "Reply-To" : {
+          "displayName" : "Reply-To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Reply-To",
+          "sensitive" : false
+        },
+        "SMTP Socket Factory" : {
+          "displayName" : "SMTP Socket Factory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Socket Factory",
+          "sensitive" : false
+        },
+        "BCC" : {
+          "displayName" : "BCC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "BCC",
+          "sensitive" : false
+        },
+        "Message" : {
+          "displayName" : "Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message",
+          "sensitive" : false
+        },
+        "Attach File" : {
+          "displayName" : "Attach File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attach File",
+          "sensitive" : false
+        },
+        "attribute-name-regex" : {
+          "displayName" : "Attributes to Send as Headers (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attribute-name-regex",
+          "sensitive" : false
+        },
+        "input-character-set" : {
+          "displayName" : "Input Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "input-character-set",
+          "sensitive" : false
+        },
+        "SMTP Port" : {
+          "displayName" : "SMTP Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Port",
+          "sensitive" : false
+        },
+        "SMTP Auth" : {
+          "displayName" : "SMTP Auth",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Auth",
+          "sensitive" : false
+        },
+        "From" : {
+          "displayName" : "From",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "From",
+          "sensitive" : false
+        },
+        "Include All Attributes In Message" : {
+          "displayName" : "Include All Attributes In Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include All Attributes In Message",
+          "sensitive" : false
+        },
+        "SMTP Hostname" : {
+          "displayName" : "SMTP Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Hostname",
+          "sensitive" : false
+        },
+        "Subject" : {
+          "displayName" : "Subject",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Subject",
+          "sensitive" : false
+        },
+        "SMTP X-Mailer Header" : {
+          "displayName" : "SMTP X-Mailer Header",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP X-Mailer Header",
+          "sensitive" : false
+        },
+        "oauth2-access-token-provider" : {
+          "displayName" : "OAuth2 Access Token Provider",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "oauth2-access-token-provider",
+          "sensitive" : false
+        },
+        "Content Type" : {
+          "displayName" : "Content Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Content Type",
+          "sensitive" : false
+        },
+        "SMTP Username" : {
+          "displayName" : "SMTP Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Username",
+          "sensitive" : false
+        },
+        "To" : {
+          "displayName" : "To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "To",
+          "sensitive" : false
+        },
+        "SMTP Password" : {
+          "displayName" : "SMTP Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Password",
+          "sensitive" : true
+        },
+        "email-ff-content-as-message" : {
+          "displayName" : "Flow file content as message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "email-ff-content-as-message",
+          "sensitive" : false
+        },
+        "authorization-mode" : {
+          "displayName" : "Authorization Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "authorization-mode",
+          "sensitive" : false
+        },
+        "SMTP TLS" : {
+          "displayName" : "SMTP STARTTLS",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP TLS",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.PutEmail",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c2c2578c-fe48-3415-82ad-b2f983f4a519",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Jobs-Email-Notification",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -1600.0,
+        "y" : 776.0
+      },
+      "properties" : {
+        "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
+        "Message" : "${email.content}",
+        "Attach File" : "false",
+        "input-character-set" : "UTF-8",
+        "SMTP Port" : "587",
+        "SMTP Auth" : "true",
+        "From" : "A1netcoolqaprobe@cox.com",
+        "Include All Attributes In Message" : "false",
+        "SMTP Hostname" : "smtp.office365.com",
+        "Subject" : "Spark Jobs Exceeds Runtime",
+        "SMTP X-Mailer Header" : "NiFi",
+        "Content Type" : "text/plain",
+        "SMTP Username" : "A1netcoolqaprobe@cox.com",
+        "To" : "chandraprasad.konakalla@cox.com,bhargavkumar.kodavali@cox.com,bhavika.patel@cox.com,lalithreddy.gangi@cox.com,kumarsrinivas.katta@cox.com",
+        "email-ff-content-as-message" : "true",
+        "authorization-mode" : "password-based-authorization-mode",
+        "SMTP TLS" : "true"
+      },
+      "propertyDescriptors" : {
+        "CC" : {
+          "displayName" : "CC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CC",
+          "sensitive" : false
+        },
+        "Reply-To" : {
+          "displayName" : "Reply-To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Reply-To",
+          "sensitive" : false
+        },
+        "SMTP Socket Factory" : {
+          "displayName" : "SMTP Socket Factory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Socket Factory",
+          "sensitive" : false
+        },
+        "BCC" : {
+          "displayName" : "BCC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "BCC",
+          "sensitive" : false
+        },
+        "Message" : {
+          "displayName" : "Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message",
+          "sensitive" : false
+        },
+        "Attach File" : {
+          "displayName" : "Attach File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attach File",
+          "sensitive" : false
+        },
+        "attribute-name-regex" : {
+          "displayName" : "Attributes to Send as Headers (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attribute-name-regex",
+          "sensitive" : false
+        },
+        "input-character-set" : {
+          "displayName" : "Input Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "input-character-set",
+          "sensitive" : false
+        },
+        "SMTP Port" : {
+          "displayName" : "SMTP Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Port",
+          "sensitive" : false
+        },
+        "SMTP Auth" : {
+          "displayName" : "SMTP Auth",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Auth",
+          "sensitive" : false
+        },
+        "From" : {
+          "displayName" : "From",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "From",
+          "sensitive" : false
+        },
+        "Include All Attributes In Message" : {
+          "displayName" : "Include All Attributes In Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include All Attributes In Message",
+          "sensitive" : false
+        },
+        "SMTP Hostname" : {
+          "displayName" : "SMTP Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Hostname",
+          "sensitive" : false
+        },
+        "Subject" : {
+          "displayName" : "Subject",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Subject",
+          "sensitive" : false
+        },
+        "SMTP X-Mailer Header" : {
+          "displayName" : "SMTP X-Mailer Header",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP X-Mailer Header",
+          "sensitive" : false
+        },
+        "oauth2-access-token-provider" : {
+          "displayName" : "OAuth2 Access Token Provider",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "oauth2-access-token-provider",
+          "sensitive" : false
+        },
+        "Content Type" : {
+          "displayName" : "Content Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Content Type",
+          "sensitive" : false
+        },
+        "SMTP Username" : {
+          "displayName" : "SMTP Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Username",
+          "sensitive" : false
+        },
+        "To" : {
+          "displayName" : "To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "To",
+          "sensitive" : false
+        },
+        "SMTP Password" : {
+          "displayName" : "SMTP Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Password",
+          "sensitive" : true
+        },
+        "email-ff-content-as-message" : {
+          "displayName" : "Flow file content as message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "email-ff-content-as-message",
+          "sensitive" : false
+        },
+        "authorization-mode" : {
+          "displayName" : "Authorization Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "authorization-mode",
+          "sensitive" : false
+        },
+        "SMTP TLS" : {
+          "displayName" : "SMTP STARTTLS",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP TLS",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.PutEmail",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "unmatched" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ce8f4b9a-eb2b-3a76-93e3-cff3a7f0eb71",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Enrich-Output",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 32.0,
+        "y" : 608.0
+      },
+      "properties" : {
+        "Enable Unicode Predefined Character Classes" : "false",
+        "Status" : "(?mi)^.*err.*\\n?",
+        "Permit Whitespace and Comments in Pattern" : "false",
+        "Enable Unicode-aware Case Folding" : "false",
+        "Enable named group support" : "false",
+        "Enable DOTALL Mode" : "false",
+        "Enable Unix Lines Mode" : "false",
+        "Maximum Buffer Size" : "1 MB",
+        "Enable Canonical Equivalence" : "false",
+        "Enable Case-insensitive Matching" : "false",
+        "Enable Multiline Mode" : "false",
+        "Enable repeating capture group" : "false",
+        "Maximum Capture Group Length" : "1024",
+        "Enable Literal Parsing of the Pattern" : "false",
+        "Character Set" : "UTF-8",
+        "Include Capture Group 0" : "true"
+      },
+      "propertyDescriptors" : {
+        "Enable Unicode Predefined Character Classes" : {
+          "displayName" : "Enable Unicode Predefined Character Classes",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode Predefined Character Classes",
+          "sensitive" : false
+        },
+        "Status" : {
+          "displayName" : "Status",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "Status",
+          "sensitive" : false
+        },
+        "Permit Whitespace and Comments in Pattern" : {
+          "displayName" : "Permit Whitespace and Comments in Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Permit Whitespace and Comments in Pattern",
+          "sensitive" : false
+        },
+        "Enable Unicode-aware Case Folding" : {
+          "displayName" : "Enable Unicode-aware Case Folding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode-aware Case Folding",
+          "sensitive" : false
+        },
+        "Enable named group support" : {
+          "displayName" : "Enable named group support",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable named group support",
+          "sensitive" : false
+        },
+        "Enable DOTALL Mode" : {
+          "displayName" : "Enable DOTALL Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable DOTALL Mode",
+          "sensitive" : false
+        },
+        "Enable Unix Lines Mode" : {
+          "displayName" : "Enable Unix Lines Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unix Lines Mode",
+          "sensitive" : false
+        },
+        "Maximum Buffer Size" : {
+          "displayName" : "Maximum Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Buffer Size",
+          "sensitive" : false
+        },
+        "Enable Canonical Equivalence" : {
+          "displayName" : "Enable Canonical Equivalence",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Canonical Equivalence",
+          "sensitive" : false
+        },
+        "Enable Case-insensitive Matching" : {
+          "displayName" : "Enable Case-insensitive Matching",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Case-insensitive Matching",
+          "sensitive" : false
+        },
+        "Enable Multiline Mode" : {
+          "displayName" : "Enable Multiline Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Multiline Mode",
+          "sensitive" : false
+        },
+        "Enable repeating capture group" : {
+          "displayName" : "Enable repeating capture group",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable repeating capture group",
+          "sensitive" : false
+        },
+        "Maximum Capture Group Length" : {
+          "displayName" : "Maximum Capture Group Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Capture Group Length",
+          "sensitive" : false
+        },
+        "Enable Literal Parsing of the Pattern" : {
+          "displayName" : "Enable Literal Parsing of the Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Literal Parsing of the Pattern",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Include Capture Group 0" : {
+          "displayName" : "Include Capture Group 0",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Capture Group 0",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExtractText",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "9a62cf51-5ac3-38a7-a137-b178cddb9234",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Structured-Update",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -480.0,
+        "y" : 304.0
+      },
+      "properties" : {
+        "argumentsStrategy" : "Command Arguments Property",
+        "Max Attribute Length" : "256",
+        "Command Path" : "sh",
+        "Argument Delimiter" : ";",
+        "Ignore STDIN" : "false",
+        "Command Arguments" : "/opt/nifi/nifi-current/conf/scripts/worker/spark-update.sh"
+      },
+      "propertyDescriptors" : {
+        "argumentsStrategy" : {
+          "displayName" : "Command Arguments Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "argumentsStrategy",
+          "sensitive" : false
+        },
+        "Max Attribute Length" : {
+          "displayName" : "Max Attribute Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Attribute Length",
+          "sensitive" : false
+        },
+        "Output MIME Type" : {
+          "displayName" : "Output MIME Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output MIME Type",
+          "sensitive" : false
+        },
+        "Working Directory" : {
+          "displayName" : "Working Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Working Directory",
+          "sensitive" : false
+        },
+        "Command Path" : {
+          "displayName" : "Command Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Path",
+          "sensitive" : false
+        },
+        "Output Destination Attribute" : {
+          "displayName" : "Output Destination Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Destination Attribute",
+          "sensitive" : false
+        },
+        "Argument Delimiter" : {
+          "displayName" : "Argument Delimiter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Argument Delimiter",
+          "sensitive" : false
+        },
+        "Ignore STDIN" : {
+          "displayName" : "Ignore STDIN",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore STDIN",
+          "sensitive" : false
+        },
+        "Command Arguments" : {
+          "displayName" : "Command Arguments",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Arguments",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "43b12d6e-4b09-32bc-a82e-0ad5de1a53a3",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Jobs-Monitoring-Info",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -1600.0,
+        "y" : 504.0
+      },
+      "properties" : {
+        "Keep Source File" : "false",
+        "Minimum File Age" : "0 sec",
+        "Polling Interval" : "0 sec",
+        "Input Directory" : "/opt/nifi/nifi-current/conf/scripts/output/",
+        "Batch Size" : "10",
+        "Minimum File Size" : "0 B",
+        "Ignore Hidden Files" : "true",
+        "Recurse Subdirectories" : "true",
+        "File Filter" : "[^\\.].*"
+      },
+      "propertyDescriptors" : {
+        "Keep Source File" : {
+          "displayName" : "Keep Source File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Keep Source File",
+          "sensitive" : false
+        },
+        "Minimum File Age" : {
+          "displayName" : "Minimum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Age",
+          "sensitive" : false
+        },
+        "Polling Interval" : {
+          "displayName" : "Polling Interval",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Polling Interval",
+          "sensitive" : false
+        },
+        "Input Directory" : {
+          "displayName" : "Input Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Input Directory",
+          "sensitive" : false
+        },
+        "Maximum File Age" : {
+          "displayName" : "Maximum File Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Age",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Maximum File Size" : {
+          "displayName" : "Maximum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Size",
+          "sensitive" : false
+        },
+        "Minimum File Size" : {
+          "displayName" : "Minimum File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Size",
+          "sensitive" : false
+        },
+        "Ignore Hidden Files" : {
+          "displayName" : "Ignore Hidden Files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore Hidden Files",
+          "sensitive" : false
+        },
+        "Recurse Subdirectories" : {
+          "displayName" : "Recurse Subdirectories",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Recurse Subdirectories",
+          "sensitive" : false
+        },
+        "File Filter" : {
+          "displayName" : "File Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Filter",
+          "sensitive" : false
+        },
+        "Path Filter" : {
+          "displayName" : "Path Filter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Filter",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GetFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "12cd5b6b-c512-3a1a-b5ee-7944f5db0139",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Soak",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 624.0,
+        "y" : 304.0
+      },
+      "properties" : {
+        "argumentsStrategy" : "Command Arguments Property",
+        "Max Attribute Length" : "256",
+        "Command Path" : "sh",
+        "Argument Delimiter" : ";",
+        "Ignore STDIN" : "false",
+        "Command Arguments" : "/opt/nifi/nifi-current/conf/scripts/worker/spark-soak.sh"
+      },
+      "propertyDescriptors" : {
+        "argumentsStrategy" : {
+          "displayName" : "Command Arguments Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "argumentsStrategy",
+          "sensitive" : false
+        },
+        "Max Attribute Length" : {
+          "displayName" : "Max Attribute Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Attribute Length",
+          "sensitive" : false
+        },
+        "Output MIME Type" : {
+          "displayName" : "Output MIME Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output MIME Type",
+          "sensitive" : false
+        },
+        "Working Directory" : {
+          "displayName" : "Working Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Working Directory",
+          "sensitive" : false
+        },
+        "Command Path" : {
+          "displayName" : "Command Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Path",
+          "sensitive" : false
+        },
+        "Output Destination Attribute" : {
+          "displayName" : "Output Destination Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Destination Attribute",
+          "sensitive" : false
+        },
+        "Argument Delimiter" : {
+          "displayName" : "Argument Delimiter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Argument Delimiter",
+          "sensitive" : false
+        },
+        "Ignore STDIN" : {
+          "displayName" : "Ignore STDIN",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Ignore STDIN",
+          "sensitive" : false
+        },
+        "Command Arguments" : {
+          "displayName" : "Command Arguments",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Command Arguments",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6149b67e-6c73-3c29-b09a-ee49ee519a55",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Nifi-Email-Notification",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1048.0,
+        "y" : 16.0
+      },
+      "properties" : {
+        "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
+        "Message" : "${email.content}",
+        "Attach File" : "false",
+        "input-character-set" : "UTF-8",
+        "SMTP Port" : "587",
+        "SMTP Auth" : "true",
+        "From" : "A1netcoolqaprobe@cox.com",
+        "Include All Attributes In Message" : "false",
+        "SMTP Hostname" : "smtp.office365.com",
+        "Subject" : "NIFI-STATUS ERROR NOTIFICATION",
+        "SMTP X-Mailer Header" : "NiFi",
+        "Content Type" : "text/plain",
+        "SMTP Username" : "A1netcoolqaprobe@cox.com",
+        "To" : "chandraprasad.konakalla@cox.com,kumarsrinivas.katta@cox.com",
+        "email-ff-content-as-message" : "true",
+        "authorization-mode" : "password-based-authorization-mode",
+        "SMTP TLS" : "true"
+      },
+      "propertyDescriptors" : {
+        "CC" : {
+          "displayName" : "CC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CC",
+          "sensitive" : false
+        },
+        "Reply-To" : {
+          "displayName" : "Reply-To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Reply-To",
+          "sensitive" : false
+        },
+        "SMTP Socket Factory" : {
+          "displayName" : "SMTP Socket Factory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Socket Factory",
+          "sensitive" : false
+        },
+        "BCC" : {
+          "displayName" : "BCC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "BCC",
+          "sensitive" : false
+        },
+        "Message" : {
+          "displayName" : "Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message",
+          "sensitive" : false
+        },
+        "Attach File" : {
+          "displayName" : "Attach File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attach File",
+          "sensitive" : false
+        },
+        "attribute-name-regex" : {
+          "displayName" : "Attributes to Send as Headers (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attribute-name-regex",
+          "sensitive" : false
+        },
+        "input-character-set" : {
+          "displayName" : "Input Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "input-character-set",
+          "sensitive" : false
+        },
+        "SMTP Port" : {
+          "displayName" : "SMTP Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Port",
+          "sensitive" : false
+        },
+        "SMTP Auth" : {
+          "displayName" : "SMTP Auth",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Auth",
+          "sensitive" : false
+        },
+        "From" : {
+          "displayName" : "From",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "From",
+          "sensitive" : false
+        },
+        "Include All Attributes In Message" : {
+          "displayName" : "Include All Attributes In Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include All Attributes In Message",
+          "sensitive" : false
+        },
+        "SMTP Hostname" : {
+          "displayName" : "SMTP Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Hostname",
+          "sensitive" : false
+        },
+        "Subject" : {
+          "displayName" : "Subject",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Subject",
+          "sensitive" : false
+        },
+        "SMTP X-Mailer Header" : {
+          "displayName" : "SMTP X-Mailer Header",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP X-Mailer Header",
+          "sensitive" : false
+        },
+        "oauth2-access-token-provider" : {
+          "displayName" : "OAuth2 Access Token Provider",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "oauth2-access-token-provider",
+          "sensitive" : false
+        },
+        "Content Type" : {
+          "displayName" : "Content Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Content Type",
+          "sensitive" : false
+        },
+        "SMTP Username" : {
+          "displayName" : "SMTP Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Username",
+          "sensitive" : false
+        },
+        "To" : {
+          "displayName" : "To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "To",
+          "sensitive" : false
+        },
+        "SMTP Password" : {
+          "displayName" : "SMTP Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Password",
+          "sensitive" : true
+        },
+        "email-ff-content-as-message" : {
+          "displayName" : "Flow file content as message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "email-ff-content-as-message",
+          "sensitive" : false
+        },
+        "authorization-mode" : {
+          "displayName" : "Authorization Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "authorization-mode",
+          "sensitive" : false
+        },
+        "SMTP TLS" : {
+          "displayName" : "SMTP STARTTLS",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP TLS",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.PutEmail",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bb642a36-eaa0-346e-8f96-0a5d04690028",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Scheduling-Workflow",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -224.0,
+        "y" : -240.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "2 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c43da2d4-2b3c-31ab-bf63-8c24336e4ef6",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Skip-DeadLock-Issue",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -2232.0,
+        "y" : 608.0
+      },
+      "properties" : {
+        "Regular Expression" : "(?mi)^.*ORA-00060.*\\n?",
+        "Replacement Value" : "",
+        "Evaluation Mode" : "Line-by-Line",
+        "Line-by-Line Evaluation Mode" : "All",
+        "Character Set" : "UTF-8",
+        "Maximum Buffer Size" : "1 MB",
+        "Replacement Strategy" : "Regex Replace"
+      },
+      "propertyDescriptors" : {
+        "Regular Expression" : {
+          "displayName" : "Search Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Regular Expression",
+          "sensitive" : false
+        },
+        "Replacement Value" : {
+          "displayName" : "Replacement Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Replacement Value",
+          "sensitive" : false
+        },
+        "Evaluation Mode" : {
+          "displayName" : "Evaluation Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Evaluation Mode",
+          "sensitive" : false
+        },
+        "Text to Prepend" : {
+          "displayName" : "Text to Prepend",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Text to Prepend",
+          "sensitive" : false
+        },
+        "Line-by-Line Evaluation Mode" : {
+          "displayName" : "Line-by-Line Evaluation Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Line-by-Line Evaluation Mode",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Maximum Buffer Size" : {
+          "displayName" : "Maximum Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Buffer Size",
+          "sensitive" : false
+        },
+        "Replacement Strategy" : {
+          "displayName" : "Replacement Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Replacement Strategy",
+          "sensitive" : false
+        },
+        "Text to Append" : {
+          "displayName" : "Text to Append",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Text to Append",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "DISABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ReplaceText",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0bf74b7f-1eff-33e4-957c-37c32070f0bd",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Structured-Insert-Email-Notification",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -1024.0,
+        "y" : 920.0
+      },
+      "properties" : {
+        "SMTP Socket Factory" : "javax.net.ssl.SSLSocketFactory",
+        "Message" : "${email.content}",
+        "Attach File" : "false",
+        "input-character-set" : "UTF-8",
+        "SMTP Port" : "587",
+        "SMTP Auth" : "true",
+        "From" : "A1netcoolqaprobe@cox.com",
+        "Include All Attributes In Message" : "false",
+        "SMTP Hostname" : "smtp.office365.com",
+        "Subject" : "SPARK-STRUCTURED ERROR NOTIFICATION FOR INSERT",
+        "SMTP X-Mailer Header" : "NiFi",
+        "Content Type" : "text/plain",
+        "SMTP Username" : "A1netcoolqaprobe@cox.com",
+        "To" : "chandraprasad.konakalla@cox.com,bhargavkumar.kodavali@cox.com,bhavika.patel@cox.com,lalithreddy.gangi@cox.com,kumarsrinivas.katta@cox.com",
+        "email-ff-content-as-message" : "true",
+        "authorization-mode" : "password-based-authorization-mode",
+        "SMTP TLS" : "true"
+      },
+      "propertyDescriptors" : {
+        "CC" : {
+          "displayName" : "CC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CC",
+          "sensitive" : false
+        },
+        "Reply-To" : {
+          "displayName" : "Reply-To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Reply-To",
+          "sensitive" : false
+        },
+        "SMTP Socket Factory" : {
+          "displayName" : "SMTP Socket Factory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Socket Factory",
+          "sensitive" : false
+        },
+        "BCC" : {
+          "displayName" : "BCC",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "BCC",
+          "sensitive" : false
+        },
+        "Message" : {
+          "displayName" : "Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Message",
+          "sensitive" : false
+        },
+        "Attach File" : {
+          "displayName" : "Attach File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attach File",
+          "sensitive" : false
+        },
+        "attribute-name-regex" : {
+          "displayName" : "Attributes to Send as Headers (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "attribute-name-regex",
+          "sensitive" : false
+        },
+        "input-character-set" : {
+          "displayName" : "Input Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "input-character-set",
+          "sensitive" : false
+        },
+        "SMTP Port" : {
+          "displayName" : "SMTP Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Port",
+          "sensitive" : false
+        },
+        "SMTP Auth" : {
+          "displayName" : "SMTP Auth",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Auth",
+          "sensitive" : false
+        },
+        "From" : {
+          "displayName" : "From",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "From",
+          "sensitive" : false
+        },
+        "Include All Attributes In Message" : {
+          "displayName" : "Include All Attributes In Message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include All Attributes In Message",
+          "sensitive" : false
+        },
+        "SMTP Hostname" : {
+          "displayName" : "SMTP Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Hostname",
+          "sensitive" : false
+        },
+        "Subject" : {
+          "displayName" : "Subject",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Subject",
+          "sensitive" : false
+        },
+        "SMTP X-Mailer Header" : {
+          "displayName" : "SMTP X-Mailer Header",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP X-Mailer Header",
+          "sensitive" : false
+        },
+        "oauth2-access-token-provider" : {
+          "displayName" : "OAuth2 Access Token Provider",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "oauth2-access-token-provider",
+          "sensitive" : false
+        },
+        "Content Type" : {
+          "displayName" : "Content Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Content Type",
+          "sensitive" : false
+        },
+        "SMTP Username" : {
+          "displayName" : "SMTP Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Username",
+          "sensitive" : false
+        },
+        "To" : {
+          "displayName" : "To",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "To",
+          "sensitive" : false
+        },
+        "SMTP Password" : {
+          "displayName" : "SMTP Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP Password",
+          "sensitive" : true
+        },
+        "email-ff-content-as-message" : {
+          "displayName" : "Flow file content as message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "email-ff-content-as-message",
+          "sensitive" : false
+        },
+        "authorization-mode" : {
+          "displayName" : "Authorization Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "authorization-mode",
+          "sensitive" : false
+        },
+        "SMTP TLS" : {
+          "displayName" : "SMTP STARTTLS",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SMTP TLS",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.PutEmail",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "unmatched" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "17f44b47-9e7e-3525-bd5a-449a358195d3",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Soak-Output",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 624.0,
+        "y" : 608.0
+      },
+      "properties" : {
+        "Enable Unicode Predefined Character Classes" : "false",
+        "Status" : "(?mi)^.*err.*\\n?",
+        "Permit Whitespace and Comments in Pattern" : "false",
+        "Enable Unicode-aware Case Folding" : "false",
+        "Enable named group support" : "false",
+        "Enable DOTALL Mode" : "false",
+        "Enable Unix Lines Mode" : "false",
+        "Maximum Buffer Size" : "1 MB",
+        "Enable Canonical Equivalence" : "false",
+        "Enable Case-insensitive Matching" : "false",
+        "Enable Multiline Mode" : "false",
+        "Enable repeating capture group" : "false",
+        "Maximum Capture Group Length" : "1024",
+        "Enable Literal Parsing of the Pattern" : "false",
+        "Character Set" : "UTF-8",
+        "Include Capture Group 0" : "true"
+      },
+      "propertyDescriptors" : {
+        "Enable Unicode Predefined Character Classes" : {
+          "displayName" : "Enable Unicode Predefined Character Classes",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode Predefined Character Classes",
+          "sensitive" : false
+        },
+        "Status" : {
+          "displayName" : "Status",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "Status",
+          "sensitive" : false
+        },
+        "Permit Whitespace and Comments in Pattern" : {
+          "displayName" : "Permit Whitespace and Comments in Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Permit Whitespace and Comments in Pattern",
+          "sensitive" : false
+        },
+        "Enable Unicode-aware Case Folding" : {
+          "displayName" : "Enable Unicode-aware Case Folding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode-aware Case Folding",
+          "sensitive" : false
+        },
+        "Enable named group support" : {
+          "displayName" : "Enable named group support",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable named group support",
+          "sensitive" : false
+        },
+        "Enable DOTALL Mode" : {
+          "displayName" : "Enable DOTALL Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable DOTALL Mode",
+          "sensitive" : false
+        },
+        "Enable Unix Lines Mode" : {
+          "displayName" : "Enable Unix Lines Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unix Lines Mode",
+          "sensitive" : false
+        },
+        "Maximum Buffer Size" : {
+          "displayName" : "Maximum Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Buffer Size",
+          "sensitive" : false
+        },
+        "Enable Canonical Equivalence" : {
+          "displayName" : "Enable Canonical Equivalence",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Canonical Equivalence",
+          "sensitive" : false
+        },
+        "Enable Case-insensitive Matching" : {
+          "displayName" : "Enable Case-insensitive Matching",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Case-insensitive Matching",
+          "sensitive" : false
+        },
+        "Enable Multiline Mode" : {
+          "displayName" : "Enable Multiline Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Multiline Mode",
+          "sensitive" : false
+        },
+        "Enable repeating capture group" : {
+          "displayName" : "Enable repeating capture group",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable repeating capture group",
+          "sensitive" : false
+        },
+        "Maximum Capture Group Length" : {
+          "displayName" : "Maximum Capture Group Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Capture Group Length",
+          "sensitive" : false
+        },
+        "Enable Literal Parsing of the Pattern" : {
+          "displayName" : "Enable Literal Parsing of the Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Literal Parsing of the Pattern",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Include Capture Group 0" : {
+          "displayName" : "Include Capture Group 0",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Capture Group 0",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExtractText",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "unmatched" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "dd9bd7e6-4e80-37f7-9d34-bab2073a0d10",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Nifi-Status-Output",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 424.0,
+        "y" : 16.0
+      },
+      "properties" : {
+        "Enable Unicode Predefined Character Classes" : "false",
+        "Status" : "(?mi)^.*down.*\\n?",
+        "Permit Whitespace and Comments in Pattern" : "false",
+        "Enable Unicode-aware Case Folding" : "false",
+        "Enable named group support" : "false",
+        "Enable DOTALL Mode" : "false",
+        "Enable Unix Lines Mode" : "false",
+        "Maximum Buffer Size" : "1 MB",
+        "Enable Canonical Equivalence" : "false",
+        "Enable Case-insensitive Matching" : "false",
+        "Enable Multiline Mode" : "false",
+        "Enable repeating capture group" : "false",
+        "Maximum Capture Group Length" : "1024",
+        "Enable Literal Parsing of the Pattern" : "false",
+        "Character Set" : "UTF-8",
+        "Include Capture Group 0" : "true"
+      },
+      "propertyDescriptors" : {
+        "Enable Unicode Predefined Character Classes" : {
+          "displayName" : "Enable Unicode Predefined Character Classes",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode Predefined Character Classes",
+          "sensitive" : false
+        },
+        "Status" : {
+          "displayName" : "Status",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "Status",
+          "sensitive" : false
+        },
+        "Permit Whitespace and Comments in Pattern" : {
+          "displayName" : "Permit Whitespace and Comments in Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Permit Whitespace and Comments in Pattern",
+          "sensitive" : false
+        },
+        "Enable Unicode-aware Case Folding" : {
+          "displayName" : "Enable Unicode-aware Case Folding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode-aware Case Folding",
+          "sensitive" : false
+        },
+        "Enable named group support" : {
+          "displayName" : "Enable named group support",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable named group support",
+          "sensitive" : false
+        },
+        "Enable DOTALL Mode" : {
+          "displayName" : "Enable DOTALL Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable DOTALL Mode",
+          "sensitive" : false
+        },
+        "Enable Unix Lines Mode" : {
+          "displayName" : "Enable Unix Lines Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unix Lines Mode",
+          "sensitive" : false
+        },
+        "Maximum Buffer Size" : {
+          "displayName" : "Maximum Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Buffer Size",
+          "sensitive" : false
+        },
+        "Enable Canonical Equivalence" : {
+          "displayName" : "Enable Canonical Equivalence",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Canonical Equivalence",
+          "sensitive" : false
+        },
+        "Enable Case-insensitive Matching" : {
+          "displayName" : "Enable Case-insensitive Matching",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Case-insensitive Matching",
+          "sensitive" : false
+        },
+        "Enable Multiline Mode" : {
+          "displayName" : "Enable Multiline Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Multiline Mode",
+          "sensitive" : false
+        },
+        "Enable repeating capture group" : {
+          "displayName" : "Enable repeating capture group",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable repeating capture group",
+          "sensitive" : false
+        },
+        "Maximum Capture Group Length" : {
+          "displayName" : "Maximum Capture Group Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Capture Group Length",
+          "sensitive" : false
+        },
+        "Enable Literal Parsing of the Pattern" : {
+          "displayName" : "Enable Literal Parsing of the Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Literal Parsing of the Pattern",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Include Capture Group 0" : {
+          "displayName" : "Include Capture Group 0",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Capture Group 0",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExtractText",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "unmatched" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "52ddeb30-4fde-3977-bda0-e8f9c01e3fd3",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Spark-Structured-Insert-Output",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -1024.0,
+        "y" : 608.0
+      },
+      "properties" : {
+        "Enable Unicode Predefined Character Classes" : "false",
+        "Status" : "(?mi)^.*err.*\\n?",
+        "Permit Whitespace and Comments in Pattern" : "false",
+        "Enable Unicode-aware Case Folding" : "false",
+        "Enable named group support" : "false",
+        "Enable DOTALL Mode" : "false",
+        "Enable Unix Lines Mode" : "false",
+        "Maximum Buffer Size" : "1 MB",
+        "Enable Canonical Equivalence" : "false",
+        "Enable Case-insensitive Matching" : "false",
+        "Enable Multiline Mode" : "false",
+        "Enable repeating capture group" : "false",
+        "Maximum Capture Group Length" : "1024",
+        "Enable Literal Parsing of the Pattern" : "false",
+        "Character Set" : "UTF-8",
+        "Include Capture Group 0" : "true"
+      },
+      "propertyDescriptors" : {
+        "Enable Unicode Predefined Character Classes" : {
+          "displayName" : "Enable Unicode Predefined Character Classes",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode Predefined Character Classes",
+          "sensitive" : false
+        },
+        "Status" : {
+          "displayName" : "Status",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "Status",
+          "sensitive" : false
+        },
+        "Permit Whitespace and Comments in Pattern" : {
+          "displayName" : "Permit Whitespace and Comments in Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Permit Whitespace and Comments in Pattern",
+          "sensitive" : false
+        },
+        "Enable Unicode-aware Case Folding" : {
+          "displayName" : "Enable Unicode-aware Case Folding",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unicode-aware Case Folding",
+          "sensitive" : false
+        },
+        "Enable named group support" : {
+          "displayName" : "Enable named group support",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable named group support",
+          "sensitive" : false
+        },
+        "Enable DOTALL Mode" : {
+          "displayName" : "Enable DOTALL Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable DOTALL Mode",
+          "sensitive" : false
+        },
+        "Enable Unix Lines Mode" : {
+          "displayName" : "Enable Unix Lines Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Unix Lines Mode",
+          "sensitive" : false
+        },
+        "Maximum Buffer Size" : {
+          "displayName" : "Maximum Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Buffer Size",
+          "sensitive" : false
+        },
+        "Enable Canonical Equivalence" : {
+          "displayName" : "Enable Canonical Equivalence",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Canonical Equivalence",
+          "sensitive" : false
+        },
+        "Enable Case-insensitive Matching" : {
+          "displayName" : "Enable Case-insensitive Matching",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Case-insensitive Matching",
+          "sensitive" : false
+        },
+        "Enable Multiline Mode" : {
+          "displayName" : "Enable Multiline Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Multiline Mode",
+          "sensitive" : false
+        },
+        "Enable repeating capture group" : {
+          "displayName" : "Enable repeating capture group",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable repeating capture group",
+          "sensitive" : false
+        },
+        "Maximum Capture Group Length" : {
+          "displayName" : "Maximum Capture Group Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Capture Group Length",
+          "sensitive" : false
+        },
+        "Enable Literal Parsing of the Pattern" : {
+          "displayName" : "Enable Literal Parsing of the Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Enable Literal Parsing of the Pattern",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Include Capture Group 0" : {
+          "displayName" : "Include Capture Group 0",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Capture Group 0",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExtractText",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "flowIdentifier" : "Cox-Spark",
+    "timestamp" : 0
+  }
 }
