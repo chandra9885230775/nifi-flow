@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1757416688428,
+    "description" : "with all metadata flows in spark and kafka",
+    "identifier" : "Latest-WorkFlow",
+    "lastModifiedTimestamp" : 1757416688428,
+    "name" : "Latest-WorkFlow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
